@@ -1,0 +1,10 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.minimap.size": "fill",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.formatOnPaste": true
+    }
+}
