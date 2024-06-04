@@ -48,8 +48,8 @@ class FileControlFrame(ttk.Frame):
 
     # Button Command
     def _open_file_dialog_command(self,
-                                  initial_dir: str = R'C:\Users\t.itihasi\Downloads\test',
-                                  file_types: list = [('Excell ファイル', '*.xlsx')]) -> None:
+                                  initial_dir: str = R'C:\Users',
+                                  file_types: list = [('Excel ファイル', '*.xlsx'), ('Excel マクロ ファイル', '*.xlsm')]) -> None:
         file_path = filedialog.askopenfilename(initialdir=initial_dir,
                                                filetypes=file_types)
         self.file_path.set(file_path)

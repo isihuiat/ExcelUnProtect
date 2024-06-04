@@ -50,7 +50,7 @@ class XlsxUnProtect:
         self.extracted_path = extracted_path
 
     def _remove_protection_from_sheets(self) -> None:
-        if self.org_file_extension == '.xlsx':
+        if self.org_file_extension == '.xlsx' or self.org_file_extension == '.xlsm':
             # get all sheets xml files to edit
             sheets_dir = os.path.join(self.extracted_path, 'xl', 'worksheets')
             sheets_glob = os.path.join(sheets_dir, '*.xml')
@@ -65,7 +65,7 @@ class XlsxUnProtect:
                     f.truncate()
 
     def _remove_protection_from_workbook(self) -> None:
-        if self.org_file_extension == '.xlsx':
+        if self.org_file_extension == '.xlsx' or self.org_file_extension == '.xlsm':
             # get workbook xml file to edit
             workbook = os.path.join(self.extracted_path, 'xl', 'workbook.xml')
             with open(workbook, '+r', encoding='utf-8') as f:
